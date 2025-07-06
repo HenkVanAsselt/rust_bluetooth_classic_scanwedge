@@ -1,0 +1,16 @@
+[package]
+name = "rust_bluetooth_classic_scanwedge"
+version = "0.1.0"
+edition = "2024"
+
+[dependencies]
+#tokio = { version = "1.45.1", features = ["macros", "rt-multi-thread", "time"] }
+#bluest = "0.6.9"
+#futures-lite = "2.6.0"
+#tracing = { version = "0.1.41" }
+#tracing-subscriber = { version = "0.3.19", features = ["env-filter"] }
+io_bluetooth = "0.1.0"
+
+
+
+
