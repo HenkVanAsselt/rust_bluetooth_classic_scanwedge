@@ -11,6 +11,7 @@ fn main() {
     let addr = BtAddr([0,0,0,0,0,0]);
     // let addr = BtAddr([0xcc as u8, 0x2f as u8, 0x71 as u8, 0x60 as u8, 0x1f as u8, 0x0c as u8]);
     let listener = BtListener::bind(iter::once(&addr), bt::BtProtocol::RFCOMM);
+    println!("listener: {:?}", listener);
     let local_addr = listener.as_ref().map(|l| l.local_addr()).unwrap().unwrap();
     println!("Local BT address: {:?}", local_addr);
 
@@ -23,6 +24,8 @@ fn main() {
 }
 
 fn initiate_connection() -> io::Result<()> {
+
+
     let devices = bt::discover_devices()?;
     println!("Devices:");
     for (idx, device) in devices.iter().enumerate() {
